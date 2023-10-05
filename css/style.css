@@ -1,0 +1,1216 @@
+/* -------------------------common------------------------ */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Varela Round', sans-serif;
+}
+
+.contaner{
+    width: 80%;
+    margin: auto;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+.layout{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.distance-y{
+    padding: 120px 0;
+}
+
+.section-header{
+    text-align: center;
+}
+
+.section-header .section-title{
+    font-size: 35px;
+    text-transform: capitalize;
+    margin-bottom: 5px;
+}
+
+.section-header .line{
+    display: block;
+    height: 3px;
+    width: 50px;
+    background-color: #6195ff;
+    margin: 7px auto 70px auto;
+}
+
+.clear{
+    clear: both;
+}
+/* ---------------------------header --------------------------- */
+.header{
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+}
+
+
+.logo{
+    float: left;
+    position: absolute;
+    top: 10px;
+    font-size: 25px;
+    color: #6195ff;
+    font-family: 'Croissant One', cursive;
+}
+
+.logo:hover{
+    color: black;
+}
+
+.list{
+    float: right;
+}
+
+.list li{
+    display: inline-block;
+    font-size: 15px;
+}
+
+.list li a{
+    padding: 18px 20px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    display: block;
+}
+
+.last{
+    margin-right: 40px;
+}
+
+.list li a.active::after,
+.list li a::after{
+    content: "";
+    height: 2.5px;
+    display: block;
+    background-color: #6195ff;
+}
+
+.list li a.active::after{
+    width: 100%;
+}
+
+.list li a::after{
+    width: 0;
+    transition: width 0.7s;
+}
+
+.list li a:hover::after{
+    width: 100%;
+}
+
+.list .drop{
+    position: relative;
+}
+
+.drop-list{
+    position: absolute;
+    width: 140px;
+    background-color: #6195ff;
+    text-align: center;
+    top: 49px;
+    height: 48px;
+    border-radius: 7px;
+    right: -39px;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.6s;
+    transition: opacity 0.6s;
+}
+
+.drop-list li a{
+    color: white;
+}
+
+
+.list .drop:hover .drop-list{
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.drop-list a{
+    position: relative;
+    top: -3px;
+    right: 0;
+}
+/* ---------------------------home --------------------------- */
+.home{
+    background-image: url(../images/posters-in-cozy-apartment-interior-royalty-free-image-943910360-1534189931.jpg);
+    height: 100vh;
+    background-size: cover;
+}
+
+.home .content{
+    width: 65%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: white;
+}
+
+.home .content h1{
+    font-size: 45px;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+}
+
+.home .content .desc{
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+}
+
+.home .content .button{
+    width: 150px;
+    margin-left: 15px;
+    display: inline-block;
+    padding: 18px 15px;
+    border-radius: 10px;
+    border: none;
+    font-size: 20px;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.home .content .button:hover{
+    opacity: 0.7;
+}
+
+.home .content .button-2{
+    color: white;
+    background-color: #6195ff;
+}
+/* ---------------------------about --------------------------- */
+.content{
+    position: relative;
+    overflow: auto;
+}
+
+.out{
+    background-image: url(../images/1-scaled-e1671560892107.jpg);
+    width: 30%;
+    height: 250px;
+    background-size: cover;
+    float: left;
+    position: relative;
+}
+
+.in{
+    background-image: url(../images/IndoorFurnitureCover.jpg);
+    width: 30%;
+    height: 250px;
+    background-size: cover;
+    float: left;
+    margin: 0 5%;
+    position: relative;
+}
+
+.collection{
+    background-image: url(../images/Caicos_Collection_Ramon_Esteve_Restoration_Hardware_6.jpg);
+    width: 30%;
+    height: 250px;
+    background-size: cover;
+    float: left;
+    position: relative;
+}
+
+.content .descr{
+    position: absolute;
+    font-size: 20px;
+    color: black;
+    top: 208px;
+    margin-left: 12px;
+    text-transform: capitalize;
+}
+
+.content .furniture::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: width 0.5s;
+}
+
+.content .furniture:hover::after{
+    width: 100%;
+}
+
+.content .furniture:hover .descr{
+    color: white;
+    z-index: 1;
+}
+/*  ---------------------------Portfolio--------------------------- */
+.Portfolio{
+    background-color: rgb(247, 246, 245);
+}
+
+.Portfolio-content .first-3{
+    overflow: auto;
+}
+
+.Portfolio-content .second-3{
+    overflow: auto;
+}
+
+.Portfolio-content .ph{
+    float: left;
+    width: 33.33%;
+    height: 350px;
+    position: relative;
+    background-size: cover;
+    padding: 20px;
+}
+
+.Portfolio-content .ph img{
+    width: 100%;
+    height: 300px;
+}
+
+.Portfolio-content .second-3 .photo-4{
+    background-image: url(../images/furnture-4.jpg);
+}
+
+.Portfolio-content .second-3 .photo-5{
+    background-image: url(../images/furnture-5.jpg);
+    margin: 0 5%;
+}
+
+.Portfolio-content .second-3 .photo-6{
+    background-image: url(../images/furnture-6.jpg);
+}
+
+.Portfolio-content .ph .layer-out{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.5s ;
+    transition: opacity 0.5s ;
+}
+
+.Portfolio-content .ph:hover .layer-out{
+    visibility: visible;
+    opacity: 1;
+}
+
+.Portfolio-content .ph .layer-out .layer-item{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.Portfolio-content .ph .layer-out .layer-item .layer-dec{
+    font-size: 25px;
+    text-transform: capitalize;
+    color: #6195ff;
+    margin-bottom: 10px;
+    position: relative;
+    top: 25px;
+    transition: top 0.5s;
+}
+
+.Portfolio-content .ph .layer-out .layer-item .layer-tit{
+    font-size: 20px;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    color: white;
+    position: relative;
+    top: 25px;
+    transition: top 0.5s;
+}
+
+.Portfolio-content .ph .layer-out .layer-item .icon{
+    font-size: 21px;
+    margin-left: 8px;
+    width: 40px;
+    height: 40px;
+    background-color: #6195ff;
+    color: white;
+    line-height: 40px;
+    border-radius: 7px;
+    position: relative;
+    top: 25px;
+    transition: top 0.5s;
+    cursor: pointer;
+}
+
+.Portfolio-content .ph:hover .layer-out .layer-item .layer-dec,
+.Portfolio-content .ph:hover .layer-out .layer-item .layer-tit,
+.Portfolio-content .ph:hover .layer-out .layer-item .icon{
+    top: 0px;
+}
+/* ---------------------------offer--------------------------- */
+.offer{
+    overflow: auto;
+}
+
+.contaner .div{
+    float: left;
+    width: 32%;
+    position: relative;
+}
+
+.contaner .div img{
+    width: 100%;
+}
+
+.contaner .chair{
+    margin: 0 2%;
+}
+
+.contaner .div .img{
+    float: left;
+    width: 50%;
+}
+
+.contaner .div .img img{
+    width: 100%;
+    height: 131px;
+}
+
+.contaner .div .content{
+    float: left;
+    width: 50%;
+}
+
+.contaner .div .content h3{
+    text-transform: capitalize;
+    margin-bottom: 10px;
+}
+
+.contaner .div .content h3 span{
+    color: #6195ff;
+}
+
+.contaner .div .content p{
+    text-transform: capitalize;
+    margin-bottom: 10px;
+}
+
+.contaner .div .content p span{
+    color: #6195ff;
+}
+
+.contaner .div .content a{
+    display: inline-block;
+    width: 145px;
+    height: 37px;
+    background-color: #6195ff;
+    color: black;
+    text-transform: capitalize;
+    text-align: center;
+    padding-top: 9px;
+    border-radius: 7px;
+}
+
+.contaner .div .content a:hover{
+    /* opacity: 0.8; */
+    background-color: black;
+    color: white;
+}
+/* ---------------------------service--------------------------- */
+/* .service{
+    background-color: rgb(247, 246, 245);
+    z-index: -10;
+} */
+
+.section-headerr{
+    text-align: left;
+}
+
+.section-headerr .section-titlee{
+    font-size: 35px;
+    text-transform: capitalize;
+    margin-bottom: 5px;
+}
+.section-headerr .linee{
+    display: block;
+    height: 3.5px;
+    width: 50px;
+    background-color: #6195ff;
+    margin: 7px 0 70px 0px;
+}
+
+.service .contaner{
+    overflow: auto;
+}
+
+.service .contaner .right{
+    float: left;
+    width: 47.5%;
+    background-size: cover;
+}
+
+.service .contaner .right .image-content .imge{
+    width: 500px;
+    height: 500px;
+}
+
+.service .contaner .right .image-content{
+    position: relative;
+    width: 100%;
+}
+
+.service .contaner .right .image-content::after{
+    content: "";
+    position: absolute;
+    background-color: #6195ff;
+    width: 400px;
+    height: 400px;
+    bottom: -8px;
+    right: 60px;
+    z-index: -1;
+}
+
+.service .contaner .right .image-content::before{
+    content: "";
+    position: absolute;
+    background-color: #6195ff;
+    width: 250px;
+    height: 250px;
+    top: -13px;
+    left: -13px;
+    z-index: -1;
+}
+
+.service .contaner .right .points{
+    margin-left: 210px;
+}
+
+.service .contaner .right .point{
+    height: 12px;
+    width: 12px;
+    background-color: #989fad;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 5px;
+    margin-top: 15px;
+}
+
+.service .contaner .right .point:hover{
+    background-color: #6195ff;
+}
+
+.service .contaner .right .active{
+    background-color: #6195ff;
+}
+
+.service .contaner .left{
+    float: left;
+    width: 47.5%;
+    margin-right: 5%;
+}
+
+.service .contaner .left p{
+    font-size: 22px;
+    line-height: 1.5;
+    text-transform: capitalize;
+}
+
+.service .contaner .left i{
+    display: block;
+    margin-top: 40px;
+    font-size: 20px;
+    color: #6195ff;
+}
+
+.service .contaner .left i span{
+    margin-left: 10px;
+    color: black;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+
+/* ---------------------------numbers--------------------------- */
+.numbers{
+    background-image: url(../images/maxresdefault.jpg);
+    height: 350px;
+    width: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.numbers .number-items{
+    margin-top: 145px;
+    position: relative;
+}
+
+.numbers .number-items .icon{
+    float: left;
+    width: 25%;
+    text-align: center;
+}
+
+.numbers .number-items .icon i{
+    font-size: 35px;
+    display: block;
+    color: #6195ff;
+}
+
+.numbers .number-items .icon span{
+    font-size: 33px;
+    margin-top: 8px;
+    display: block;
+    color: white;
+}
+
+.numbers .number-items .icon p{
+    font-size: 20px;
+    color: white;
+    margin-top: 6px;
+    text-transform: capitalize;
+}
+/* ---------------------------pricing--------------------------- */
+
+.pricing{
+    background-color: rgb(247, 246, 245);
+}
+
+.pricing .content{
+    overflow: auto;
+}
+
+.pricing .content .div{
+    float: left;
+    width: 30%;
+    height: 500px;
+    text-align: center;
+    border: 2px solid rgb(231, 227, 227);
+    border-radius: 10px;
+    position: relative;
+}
+
+.pricing .content .div:hover{
+    background-color: rgba(0, 0, 0,0.9);
+    transition: background-color 0.5s;
+}
+
+.pricing .content .div h3{
+    margin-top: 20px;
+    text-transform: capitalize;
+    font-size: 25px;
+}
+
+.pricing .content .div ul{
+    position: relative;
+    overflow: auto;
+}
+
+.pricing .content .div ul li{
+    margin-top: 7px;
+    display: block;
+}
+
+.pricing .content .div ul .price{
+    text-transform: capitalize;
+    font-size: 20px;
+    float: left;
+    margin-left: 50px;
+}
+
+.pricing .content .div ul .price span{
+    float: right;
+    margin-left: 60px;
+}
+
+.pricing .content .div ul .id{
+    text-transform: capitalize;
+    font-size: 20px;
+    float: left;
+    margin-left: 50px;
+    margin-bottom: 7px;
+}
+
+.pricing .content .div ul .id span{
+    float: right;
+    margin-left: 74px;
+}
+
+.pricing .content .div ul .colors{
+    margin-bottom: 7px;
+    margin-top: 2px;
+    font-size: 20px;
+    float: left;
+    margin-left: 50px;
+}
+
+.pricing .content .div ul .points{
+    /* display: inline-block; */
+    float: right;
+    margin-left: 45px;
+}
+
+.pricing .content .div ul .points li{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #6195ff;
+    border-radius: 50%;
+    margin-left: 5px;
+    margin-top: 3px;
+}
+
+.pricing .content .div ul .points .red{
+    background-color: #855341;
+    cursor: pointer;
+}
+.pricing .content .div ul .points .green{
+    background-color: #c88484;
+    cursor: pointer;
+}
+.pricing .content .div ul .points .blue{
+    background-color: #538ca8;
+    cursor: pointer;
+}
+
+.pricing .content .div button{
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid rgb(0, 0, 0);
+    font-size: 20px;
+    text-transform: capitalize;
+    background-color: white;
+    color: black;
+    float: left;
+    margin-left: 50px;
+    cursor: pointer;
+}
+
+.pricing .content .div button:hover,
+.pricing .content .div i:hover{
+    opacity: 0.8;
+}
+
+.pricing .content .div i{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgb(234, 89, 89);
+    line-height: 40px;
+    border-radius: 10px;
+    margin-left: 50px;
+    color: white;
+    cursor: pointer;
+}
+
+.pricing .content .div:hover .price,
+.pricing .content .div:hover .id,
+.pricing .content .div:hover h3,
+.pricing .content .div:hover .colors{
+    color: white;
+}
+
+.pricing .content .div:hover button{
+    background-color: #6195ff;
+    color: white;
+}
+
+.pricing .content .photo{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-size: cover;
+    margin: 20px auto;
+}
+
+.pricing .content .first .photo{
+    background-image: url(../images/s-l1200.webp);
+}
+
+.pricing .content .second{margin: 0 5%;}
+
+.pricing .content .second .photo{
+    background-image: url(../images/coleford-couch-silver-blue.webp);
+}
+
+.pricing .content .third .photo{
+    background-image: url(../images/Grey-living-room-decor--43e5557-scaled.jpg);
+}
+
+/* ---------------------------owner--------------------------- */
+.owner{
+    background-image: url(../images/sculptural-furniture-1574790540.jpg);
+    height: 350px;
+    width: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.owner .test-content{
+    margin: auto;
+}
+
+.owner .contaner .owner{
+    float: left;
+    width: 50%;
+    color: white;
+}
+
+.owner img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    position: absolute;
+    top: 26%;
+    left: 12%;
+}
+
+.owner .owner .content{
+    position: absolute;
+    top: 29%;
+    left: 28%;
+}
+
+.owner .owner .content h3{
+    text-transform: capitalize;
+    margin-bottom: 5px;
+}
+
+.owner .owner .content span{
+    color: #6195ff;
+    text-transform: capitalize;
+}
+
+.owner .owner p{
+    position: absolute;
+    top: 44%;
+    left: 28%;
+    margin-top: 10px;
+    line-height: 1.4;
+    letter-spacing: 1.6px;
+}
+
+/* ---------------------------our-team---------------------------*/
+.our-team{
+    background-color: rgb(247, 246, 245);
+}
+
+.our-team .members{
+    overflow: auto;
+}
+
+.our-team .members .member{
+    float: left;
+    width: 21.25%;
+    height: 300px;
+    background-color: #e1e0e0;
+    position: relative;
+}
+
+.our-team .members .member::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: height 0.7s;
+}
+
+.our-team .members .member:hover::after{
+    height: 100%;
+}
+
+.our-team .members .member .img-content{
+    position: relative;
+    width: 90%;
+    margin: auto;
+    margin-top: 15px;
+    z-index: 1;
+}
+
+.our-team .members .member .layout{
+    position: absolute;
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: visibility 0.7s ;
+    transition: opacity 0.7s ;
+}
+
+.our-team .members .member:hover .layout{
+    opacity: 1;
+    visibility: visible;
+}
+
+.our-team .members .member img{
+    /* margin: 25px; */
+    height: 200px;
+    width: 100%;
+}
+
+.our-team .members .member .content-img{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background-color: #6195ff;
+    text-align: center;
+    color: white;
+}
+
+.our-team .members .member .content-img .icon{
+    display: block;
+    margin-top: 8px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.our-team .members .mem-2{
+    margin: 0 5%;
+}
+
+.our-team .members .mem-3{
+    margin-right: 5%;
+}
+
+.our-team .members .member .content{
+    text-align: center;
+    position: relative;
+    bottom: -17px;
+    z-index: 1;
+}
+.our-team .members .member .content h3{
+    text-transform: capitalize;
+    transition: color 0.7s;
+}
+.our-team .members .member .content span{
+    text-transform: capitalize;
+    transition: color 0.7s;
+    color: #78797b;
+}
+
+.our-team .members .member:hover .content h3{
+    color: white;
+}
+.our-team .members .member:hover .content span{
+    color: #6195ff;
+}
+/* ---------------------------recent-content---------------------------*/
+.recent-content{
+    overflow: hidden;
+    height: 380px;
+}
+
+.recent-content .item{
+    float: left;
+    width: 20%;
+    height: 350px;
+    border: 1px solid #538ca8;
+    position: relative;
+    border-radius: 8px;
+    background-color: white;
+    margin-top: 10px;
+}
+
+.recent-content .first{
+    margin-left: 2.2%;
+}
+
+.recent-content .second{
+    margin: 10px 5%;
+}
+
+.recent-content .third{
+    margin-right: 5%;
+}
+
+.recent-content .right::after{
+    position: absolute;
+    content: "";
+    width: 40%;
+    height: 30%;
+    top: -10px;
+    left: -10px;
+    background-color: #000000;
+    border-radius: 8px;
+    z-index: -1;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.recent-content .right::before{
+    position: absolute;
+    content: "";
+    width: 40%;
+    height: 30%;
+    bottom: -10px;
+    right: -10px;
+    background-color: #000000;
+    border-radius: 8px;
+    z-index: -1;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.recent-content .item:hover::after{
+    visibility: visible;
+    opacity: 1;
+}
+
+.recent-content .item:hover::before{
+    visibility: visible;
+    opacity: 1;
+}
+
+.recent-content .left::after{
+    position: absolute;
+    content: "";
+    width: 40%;
+    height: 30%;
+    top: -10px;
+    right: -10px;
+    background-color: #000000;
+    border-radius: 8px;
+    z-index: -1;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.recent-content .left::before{
+    position: absolute;
+    content: "";
+    width: 40%;
+    height: 30%;
+    bottom: -10px;
+    left: -10px;
+    background-color: #000000;
+    border-radius: 8px;
+    z-index: -1;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.recent-content .item:hover::after{
+    visibility: visible;
+    opacity: 1;
+}
+
+.recent-content .item:hover::before{
+    visibility: visible;
+    opacity: 1;
+}
+
+.recent-content .item .new{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 5px;
+    width: 80px;
+    background-color: #6195ff;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.recent-content .item .price{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 5px;
+    width: 80px;
+    background-color: #000000;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.recent-content .item .price:hover{
+    opacity: 0.7;
+}
+.recent-content .item .new:hover{
+    opacity: 0.7;
+}
+
+.recent-content .item .img-content{
+    height: 300px;
+    width: 200px;
+    margin: auto;
+    position: relative;
+}
+
+.recent-content .item .img-content img{
+    height: 250px;
+    width: 100%;
+}
+
+.recent-content .item span{
+    text-align: center;
+    display: block;
+    position: absolute;
+    top: 63%;
+    right: 33%;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.recent-content .item .icon{
+    text-align: center;
+    position: absolute;
+    top: 72%;
+    right: 30%;
+    cursor: pointer;
+}
+
+.recent-content .item .icon:hover{
+    color: #6195ff;
+}
+
+.recent-content .item .text{
+    width: 90%;
+    height: 30px;
+    background-color: #dfe0e0;
+    text-align: center;
+    line-height: 30px;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+.recent-content .item .text i{
+    margin: 0 15px;
+    cursor: pointer;
+}
+
+.recent-content .item .text i:hover{
+    font-size: 20px;
+    color: #6195ff;
+}
+
+.recent-content .item .text .span{
+    display: block;
+    width: 3px;
+    height: 20px;
+    background-color: #ababab;
+    position: absolute;
+    top: 304px;
+    right: 70px;
+}
+
+.recent-content .item .text .s2{
+    position: absolute;
+    top: 304px;
+    right: 120px;
+}
+
+.recent-content .item .text .s3{
+    position: absolute;
+    top: 304px;
+    right: 170px;
+    width: 3.5px;
+}
+/* ---------------------------footer--------------------------- */
+.footer{
+    background-color: rgb(60, 60, 60);
+}
+
+.footer .l-logo{
+    font-size: 50px;
+    color: #6195ff;
+    font-family: 'Croissant One', cursive;
+    padding:35px 0px 5px 0px;
+}
+
+
+.footer .logoo i{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    border: 1px solid white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 35px;
+    color: white;
+    margin-right: 15px;
+    margin-bottom: 60px;
+}
+
+.footer .logoo i:hover{
+    color: #6195ff;
+    font-size: 20px;
+}
+
+.footer .content{
+    height: 200px;
+}
+
+.footer .help,
+.footer .explore,
+.footer .contact,
+.footer .account{
+    float: left;
+    width: 20%;
+}
+
+.footer .account{
+    margin-left: 50px;
+}
+
+.footer h3{
+    text-transform: uppercase;
+    color: white;
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+.footer ul li{
+    color: white;
+    text-transform: uppercase;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.footer ul li:hover{
+    cursor: pointer;
+    color: black;
+}
+
+.footer .privacy{
+    display: block;
+    color: rgb(238, 237, 237);
+    text-transform: capitalize;
+    margin-bottom: 10px;
+}
+
+.footer .COPYRIGHT{
+    text-transform: capitalize;
+    color: white;
+}
